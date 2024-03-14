@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Witaj na mojej stronie domowej</h1>
+    </header>
+    <div class="img">
+        <img src="/get_image" alt="obraz">
+    </div>
+    <div class="bottom">
+        <h1><strong> Kontakt </strong></h1>
+        <ul>
+            <li>email</li>
+            <li>tel</li>
+        </ul>
+        <h2> Wyślij wiadomość</h2>
+        <form action="{{ url_for('contact') }}" method="post">
+            <label for="user_message"></label>
+            <textarea id="user_message" name="user_message" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="submit">Prześlij</button>
+        </form>
+    </div>
+
+    <style>
+        body{
+            padding: 5%;
+        }
+        header h1{
+            background: grey;
+        }
+        .bottom h1{
+            color: blue;
+        }
+        .bottom b{
+            font-size: 150%;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</body>
+</html>
